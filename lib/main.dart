@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:nss/views/pages/main_screen.dart';
 import 'package:nss/views/pages/splash_screen.dart';
 
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Trac',
-      home: SplashScreen(),
+      home: MainScreen(),
     );
   }
 }

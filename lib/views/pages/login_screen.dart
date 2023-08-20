@@ -25,7 +25,7 @@ class _LoginScreen extends State<LoginScreen> {
             Container(
               padding: EdgeInsets.only(bottom:MediaQuery.of(context).size.height * 0.07),
               color: Colors.transparent,
-              height: MediaQuery.of(context).size.height * .5,
+              height: MediaQuery.of(context).size.height * .55,
               width: double.infinity,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -47,7 +47,7 @@ class _LoginScreen extends State<LoginScreen> {
                         fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * .07,
+                    height: MediaQuery.of(context).size.height * .08,
                   ),
                   const Text("Welcome",
                       textAlign: TextAlign.center,
@@ -60,7 +60,7 @@ class _LoginScreen extends State<LoginScreen> {
               ),
             ),
             Container(
-              padding:const EdgeInsets.all(10),
+              padding:const EdgeInsets.all(15),
               decoration: const BoxDecoration(
 
                 borderRadius: BorderRadius.only(
@@ -68,7 +68,7 @@ class _LoginScreen extends State<LoginScreen> {
                     topRight: Radius.circular(35)),
                 color: AppColors.primary,
               ),
-              height: MediaQuery.of(context).size.height * .5,
+              height: MediaQuery.of(context).size.height * .45,
               width: double.infinity,
 
               child: Column(
