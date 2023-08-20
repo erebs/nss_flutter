@@ -10,15 +10,14 @@ class PrimaryButton extends StatelessWidget {
     required this.onTap,
     this.bgColor = AppColors.primary,
     this.isContinue = false,
-
-
+    this.textColor = AppColors.fontOnSecondary,
   }) : super(key: key);
 
   String buttonText;
   VoidCallback onTap;
   bool isContinue;
   Color bgColor;
-
+  Color textColor;
 
   @override
   Widget build(BuildContext context) {
@@ -28,29 +27,44 @@ class PrimaryButton extends StatelessWidget {
       child: Container(
         width: double.maxFinite,
         padding: EdgeInsets.all(18),
-        decoration:   BoxDecoration(
+        decoration: BoxDecoration(
             color: bgColor,
             border: Border.all(width: 0, color: bgColor),
-            borderRadius: BorderRadius.circular(25)
-        ),
+            borderRadius: BorderRadius.circular(25)),
         child: Stack(
           children: [
             Center(
               child: Text(
                 buttonText,
-                style: const TextStyle(
-                    color: AppColors.fontOnSecondary,
+                style: TextStyle(
+                    color: textColor,
                     fontWeight: FontWeight.bold,
-                    fontSize: 15),),
+                    fontSize: 15),
+              ),
             ),
-
             Align(
                 alignment: Alignment.centerRight,
-                child: Icon(Remix.arrow_right_line, color: AppColors.fontOnSecondary, size: isContinue?20:0))
-
+                child: Icon(Remix.arrow_right_line,
+                    color: AppColors.fontOnSecondary,
+                    size: isContinue ? 20 : 0))
           ],
         ),
       ),
+    );
+  }
+}
+
+class ForgetButton extends StatelessWidget {
+  final VoidCallback onTap;
+  const ForgetButton({
+    Key? key,required this.onTap
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return  TouchableOpacity(
+      onTap: onTap,
+      child: Text("Forget password?",style: TextStyle(color: AppColors.fontOnSecondary,fontWeight: FontWeight.w400),textAlign: TextAlign.end,),
     );
   }
 }
